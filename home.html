@@ -29,21 +29,21 @@
 </head>
 
 <body>
-  <div class="container-scroller">
+<div class="container-scroller">
     <div class="row p-0 m-0 proBanner" id="proBanner">
       <div class="col-md-12 p-0 m-0">
         <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
           <div class="ps-lg-3">
-<!--             <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between">
               <p class="mb-0 font-weight-medium me-3 buy-now-text">Note That This Will Be Closing By 25th December</p>
               <a href="#" target="_blank" class="btn me-2 buy-now-btn border-0">explore more</a>
-            </div> -->
+            </div>
           </div>
           <div class="d-flex align-items-center justify-content-between">
             <a href="#"><i
-                class="mdi mdi-home me-3 text-white"></i></a>
+                class="fa fa-home me-3 text-white"></i></a>
             <button id="bannerClose" class="btn border-0 p-0">
-              <i class="mdi mdi-close text-white"></i>
+              <i class="fa fa-times text-white"></i>
             </button>
           </div>
         </div>
@@ -159,7 +159,7 @@
               </form>
             </li>
           </ul>
-          <ul class="navbar-nav navbar-nav-right">
+  <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown d-none d-lg-block">
               <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
                 aria-labelledby="createbuttonDropdown">
@@ -168,7 +168,7 @@
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-file-outline text-primary"></i>
+                      <i class="fa fa-file-outline text-primary"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -179,7 +179,7 @@
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-web text-info"></i>
+                      <i class="fa fa-globe text-info"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -190,7 +190,7 @@
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-layers text-danger"></i>
+                      <i class="fa fa-layer-group text-danger"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -203,7 +203,7 @@
             </li>
             <li class="nav-item nav-settings d-none d-lg-block">
               <a class="nav-link" href="#">
-                <i class="mdi mdi-view-grid"></i>
+                <i class="fa fa-th"></i>
               </a>
             </li>
             <li class="nav-item dropdown">
@@ -212,7 +212,7 @@
                   <img class="img-xs rounded-circle" id="profile-picture" src="/favicon.png"
                     alt="">
                   <p class="mb-0 d-none d-sm-block navbar-profile-name" id="navbar-profile-name">Welcome, </p>
-                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                  <i class="fa fa-angle-down d-none d-sm-block"></i>
                 </div>
               </a>
               <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
@@ -222,7 +222,7 @@
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-account text-primary"></i>
+                      <i class="fa fa-user text-primary"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -233,7 +233,7 @@
                 <a class="dropdown-item preview-item" id="upload-profile-picture">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-camera text-success"></i>
+                      <i class="fa fa-camera text-success"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -245,7 +245,7 @@
                 <a class="dropdown-item preview-item" id="withdraw-button">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-cash text-warning"></i>
+                      <i class="fa fa-money-check text-warning"></i>
                     </div>
                   </div>
                   <div class="preview-item-content">
@@ -256,47 +256,47 @@
                 <a class="dropdown-item preview-item" href="/index.html">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-logout text-danger"></i>
+                      <i class="fa fa-sign-out-alt text-danger"></i>
                     </div>
                   </div>
-                  <div class="preview-item-content">
+                                   <div class="preview-item-content">
                     <p class="preview-subject mb-1">Log out</p>
                   </div>
                 </a>
               </div>
+            </li>
+          </ul>
 
-              <!-- Withdraw Pop-up Box -->
-              <!-- Withdraw Pop-up Box -->
-              <div id="withdraw-pop-up" style="display: none;">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Withdraw</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+          <!-- Withdraw Pop-up Box -->
+          <div id="withdraw-pop-up" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Withdraw</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="account-number">Account Number:</label>
+                      <input type="text" class="form-control" id="account-number" required>
                     </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="account-number">Account Number:</label>
-                          <input type="text" class="form-control" id="account-number" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="account-name">Account Name:</label>
-                          <input type="text" class="form-control" id="account-name" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="country">Country:</label>
-                          <input type="text" class="form-control" id="country" required>
-                        </div>
-                        <button id="withdraw-submit" class="btn btn-primary">Submit</button>
-                      </form>
+                    <div class="form-group">
+                      <label for="account-name">Account Name:</label>
+                      <input type="text" class="form-control" id="account-name" required>
                     </div>
-                  </div>
+                    <div class="form-group">
+                      <label for="country">Country:</label>
+                      <input type="text" class="form-control" id="country" required>
+                    </div>
+                    <button id="withdraw-submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
               </div>
-
+            </div>
+          </div>               
               <script>
                 // Withdraw Button Click Event
                 document.getElementById('withdraw-button').addEventListener('click', function () {
