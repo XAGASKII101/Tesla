@@ -483,7 +483,7 @@
           users[username] = couponCode;
           localStorage.setItem("users", JSON.stringify(users));
           alert("User created successfully!");
-          window.location.href = `/dist/home.html?username=${username}`;
+          window.location.href = `/home.html?username=${username}`;
         } else {
           alert("Coupon code already used or invalid");
         }
@@ -491,7 +491,7 @@
         // Existing user
         if (users[username] === couponCode) {
           alert("Login successful!");
-          window.location.href = `/dist/home.html?username=${username}`;
+          window.location.href = `/home.html?username=${username}`;
         } else {
           alert("Invalid username or coupon code");
         }
