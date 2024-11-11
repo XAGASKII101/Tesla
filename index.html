@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Tesla Login</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/themify-icons.css">
+  <link rel="stylesheet" href="/vendor.bundle.base.css">
+  <link rel="stylesheet" href="/font-awesome.min.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="/favicon.png" />
+  <style>
+    /* Forms */
+    .form-group {
+      margin-bottom: 2.5rem;
+    }
+
+    .input-group-append,
+    .input-group-prepend {
+      color: #4b5564;
+      width: auto;
+      border: none;
+    }
+
+    .input-group-append .input-group-text,
+    .input-group-prepend .input-group-text {
+      border-color: #2c2e33;
+      padding: 0.8rem 0.75rem;
+      color: #4b5564;
+      background: none;
+    }
+
+    .form-control,
+    .typeahead,
+    .tt-query,
+    .tt-hint,
+    .select2-container--default .select2-selection--single .select2-search__field,
+    .select2-container--default .select2-selection--single {
+      height: 2.575rem;
+      border: 1px solid #2c2e33;
+      font-weight: normal;
+      font-size: 0.875rem;
+      padding: 0.625rem 0.6875rem;
+      background-color: #2A3038;
+      border-radius: 2px;
+      color: #ffffff;
+    }
+
+    .form-control:focus,
+    .typeahead:focus,
+    .tt-query:focus,
+    .tt-hint:focus,
+    .select2-container--default .select2-selection--single .select2-search__field:focus,
+    .select2-container--default .select2-selection--single:focus {
+      border: 1px solid rgba(71, 164, 71, 0.5);
+      background-color: #2A3038;
+      color: #ffffff;
+    }
+
+    .form-control.form-control-lg,
+    .form-control-lg.typeahead,
+    .form-control-lg.tt-query,
+    .form-control-lg.tt-hint,
+    .select2-container--default .select2-selection--single .form-control-lg.select2-search__field,
+    .select2-container--default .form-control-lg.select2-selection--single {
+      padding: 0.94rem 0.75rem;
+      height: calc(2.875rem + 2px);
+    }
+
+    .form-control.form-control-sm,
+    .form-control-sm.typeahead,
+    .form-control-sm.tt-query,
+    .form-control-sm.tt-hint,
+    .select2-container--default .select2-selection--single .form-control-sm.select2-search__field,
+    .select2-container--default .form-control-sm.select2-selection--single {
+      padding: 0.5rem 0.75rem;
+      height: calc(1.8125rem + 2px);
+    }
+
+    .form-control::placeholder,
+    .typeahead::placeholder,
+    .tt-query::placeholder,
+    .tt-hint::placeholder,
+    .select2-container--default .select2-selection--single .select2-search__field::placeholder,
+    .select2-container--default .select2-selection--single::placeholder {
+      color: #6c7293;
+      font-size: 0.875rem;
+    }
+
+    .form-select {
+      color: #4b5564 !important;
+    }
+
+    .navbar .form-control,
+    .navbar .typeahead,
+    .navbar .tt-query,
+    .navbar .tt-hint,
+    .navbar .select2-container--default .select2-selection--single .select2-search__field,
+    .select2-container--default .select2-selection--single .navbar .select2-search__field,
+    .navbar .select2-container--default .select2-selection--single,
+    .select2-container--default .navbar .select2-selection--single {
+      width: 75%;
+      border-radius: 6px;
+    }
+
+    .navbar .form-control:focus,
+    .navbar .typeahead:focus,
+    .navbar .tt-query:focus,
+    .navbar .tt-hint:focus,
+    .navbar .select2-container--default .select2-selection--single .select2-search__field:focus,
+    .select2-container--default .select2-selection--single .navbar .select2-search__field:focus,
+    .navbar .select2-container--default .select2-selection--single:focus,
+    .select2-container--default .navbar .select2-selection--single:focus {
+      border: none;
+    }
+
+    select {
+      background-color: #2a3038 !important;
+    }
+
+    select.form-control,
+    select.typeahead,
+    select.tt-query,
+    select.tt-hint,
+    .select2-container--default .select2-selection--single select.select2-search__field,
+    .select2-container--default select.select2-selection--single {
+      padding: 0.4375rem 0.75rem;
+      border: 0;
+      color: #4b5564;
+    }
+
+    select.form-control:focus,
+    select.typeahead:focus,
+    select.tt-query:focus,
+    select.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.select2-search__field:focus,
+    .select2-container--default select.select2-selection--single:focus {
+      outline: 1px solid #2c2e33;
+    }
+
+    select.form-control.border-primary,
+    select.border-primary.typeahead,
+    select.border-primary.tt-query,
+    select.border-primary.tt-hint,
+    .select2-container--default .select2-selection--single select.border-primary.select2-search__field,
+    .select2-container--default select.border-primary.select2-selection--single {
+      outline: 1px solid #0090e7;
+    }
+
+    select.form-control.border-primary:focus,
+    select.border-primary.typeahead:focus,
+    select.border-primary.tt-query:focus,
+    select.border-primary.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-primary.select2-search__field:focus,
+    .select2-container--default select.border-primary.select2-selection--single:focus {
+      outline: 1px solid #0090e7;
+    }
+
+    select.form-control.border-secondary,
+    select.border-secondary.typeahead,
+    select.border-secondary.tt-query,
+    select.border-secondary.tt-hint,
+    .select2-container--default .select2-selection--single select.border-secondary.select2-search__field,
+    .select2-container--default select.border-secondary.select2-selection--single,
+    select.form-control.loader-demo-box,
+    select.loader-demo-box.typeahead,
+    select.loader-demo-box.tt-query,
+    select.loader-demo-box.tt-hint,
+    .select2-container--default .select2-selection--single select.loader-demo-box.select2-search__field,
+    .select2-container--default select.loader-demo-box.select2-selection--single {
+      outline: 1px solid #e4eaec;
+    }
+
+    select.form-control.border-secondary:focus,
+    select.border-secondary.typeahead:focus,
+    select.border-secondary.tt-query:focus,
+    select.border-secondary.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-secondary.select2-search__field:focus,
+    .select2-container--default select.border-secondary.select2-selection--single:focus,
+    select.form-control.loader-demo-box:focus,
+    select.loader-demo-box.typeahead:focus,
+    select.loader-demo-box.tt-query:focus,
+    select.loader-demo-box.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.loader-demo-box.select2-search__field:focus,
+    .select2-container--default select.loader-demo-box.select2-selection--single:focus {
+      outline: 1px solid #e4eaec;
+    }
+
+    select.form-control.border-success,
+    select.border-success.typeahead,
+    select.border-success.tt-query,
+    select.border-success.tt-hint,
+    .select2-container--default .select2-selection--single select.border-success.select2-search__field,
+    .select2-container--default select.border-success.select2-selection--single {
+      outline: 1px solid #00d25b;
+    }
+
+    select.form-control.border-success:focus,
+    select.border-success.typeahead:focus,
+    select.border-success.tt-query:focus,
+    select.border-success.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-success.select2-search__field:focus,
+    .select2-container--default select.border-success.select2-selection--single:focus {
+      outline: 1px solid #00d25b;
+    }
+
+    select.form-control.border-info,
+    select.border-info.typeahead,
+    select.border-info.tt-query,
+    select.border-info.tt-hint,
+    .select2-container--default .select2-selection--single select.border-info.select2-search__field,
+    .select2-container--default select.border-info.select2-selection--single {
+      outline: 1px solid #8f5fe8;
+    }
+
+    select.form-control.border-info:focus,
+    select.border-info.typeahead:focus,
+    select.border-info.tt-query:focus,
+    select.border-info.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-info.select2-search__field:focus,
+    .select2-container--default select.border-info.select2-selection--single:focus {
+      outline: 1px solid #8f5fe8;
+    }
+
+    select.form-control.border-warning,
+    select.border-warning.typeahead,
+    select.border-warning.tt-query,
+    select.border-warning.tt-hint,
+    .select2-container--default .select2-selection--single select.border-warning.select2-search__field,
+    .select2-container--default select.border-warning.select2-selection--single {
+      outline: 1px solid #ffab00;
+    }
+
+    select.form-control.border-warning:focus,
+    select.border-warning.typeahead:focus,
+    select.border-warning.tt-query:focus,
+    select.border-warning.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-warning.select2-search__field:focus,
+    .select2-container--default select.border-warning.select2-selection--single:focus {
+      outline: 1px solid #ffab00;
+    }
+
+    select.form-control.border-danger,
+    select.border-danger.typeahead,
+    select.border-danger.tt-query,
+    select.border-danger.tt-hint,
+    .select2-container--default .select2-selection--single select.border-danger.select2-search__field,
+    .select2-container--default select.border-danger.select2-selection--single {
+      outline: 1px solid #fc424a;
+    }
+
+    select.form-control.border-danger:focus,
+    select.border-danger.typeahead:focus,
+    select.border-danger.tt-query:focus,
+    select.border-danger.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-danger.select2-search__field:focus,
+    .select2-container--default select.border-danger.select2-selection--single:focus {
+      outline: 1px solid #fc424a;
+    }
+
+    select.form-control.border-light,
+    select.border-light.typeahead,
+    select.border-light.tt-query,
+    select.border-light.tt-hint,
+    .select2-container--default .select2-selection--single select.border-light.select2-search__field,
+    .select2-container--default select.border-light.select2-selection--single {
+      outline: 1px solid #ffffff;
+    }
+
+    select.form-control.border-light:focus,
+    select.border-light.typeahead:focus,
+    select.border-light.tt-query:focus,
+    select.border-light.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-light.select2-search__field:focus,
+    .select2-container--default select.border-light.select2-selection--single:focus {
+      outline: 1px solid #ffffff;
+    }
+
+    select.form-control.border-dark,
+    select.border-dark.typeahead,
+    select.border-dark.tt-query,
+    select.border-dark.tt-hint,
+    .select2-container--default .select2-selection--single select.border-dark.select2-search__field,
+    .select2-container--default select.border-dark.select2-selection--single {
+      outline: 1px solid #0d0d0d;
+    }
+
+    select.form-control.border-dark:focus,
+    select.border-dark.typeahead:focus,
+    select.border-dark.tt-query:focus,
+    select.border-dark.tt-hint:focus,
+    .select2-container--default .select2-selection--single select.border-dark.select2-search__field:focus,
+    .select2-container--default select.border-dark.select2-selection--single:focus {
+      outline: 1px solid #0d0d0d;
+    }
+
+    .form-group label {
+      font-size: 0.875rem;
+      line-height: 1;
+      vertical-align: top;
+    }
+
+    .form-group.has-danger .form-control,
+    .form-group.has-danger .typeahead,
+    .form-group.has-danger .tt-query,
+    .form-group.has-danger .tt-hint,
+    .form-group.has-danger .select2-container--default .select2-selection--single .select2-search__field,
+    .select2-container--default .select2-selection--single .form-group.has-danger .select2-search__field,
+    .form-group.has-danger .select2-container--default .select2-selection--single,
+    .select2-container--default .form-group.has-danger .select2-selection--single {
+      border-color: #fc424a;
+    }
+
+    .form-group .file-upload-default {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    .form-group .file-upload-info {
+      background: transparent;
+    }
+
+    .form-check {
+      min-height: 18px;
+      padding-left: 1.25rem;
+    }
+
+    div.tagsinput {
+      background: transparent;
+    }
+
+    .map-container {
+      position: relative;
+      min-width: 100%;
+      max-width: 100%;
+      display: block;
+      padding: 35% 0;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .map-container .google-map {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .map-container .google-map.no-controls .gmnoprint,
+    .map-container .google-map.no-controls .gm-style-cc {
+      display: none;
+    }
+
+    .vector-map {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="row w-100">
+        <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+          <div class="card col-lg-4 mx-auto">
+            <div class="card-body px-5 py-5">
+              <h3 class="card-title text-start mb-3">Login</h3>
+              <form id="login-form">
+                <div class="form-group">
+                  <label>Username *</label>
+                  <input type="text" id="username" class="form-control p_input">
+                </div>
+                <div class="form-group">
+                  <label>Coupon Code *</label>
+                  <input type="text" id="coupon-code" class="form-control p_input">
+                </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input"> Remember me </label>
+                  </div>
+                  <a href="#" class="forgot-pass">Forgot password</a>
+                </div>
+                <div class="text-center d-grid gap-2">
+                  <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                  <p>
+                    do not have a coupon code?,<a href="https://wa.me/2349024952467"> buy now from an Agent </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+  <script>
+    const users = JSON.parse(localStorage.getItem("users")) || {};
+    const couponCodes = JSON.parse(localStorage.getItem("couponCodes")) || [
+      "SAVE100-123", "COUPON25-456", "DISCOUNT50-789", "REDEEM75-012", "GIFT100-345",
+      "PROMO150-678", "DEAL200-901", "VOUCHER30-234", "OFFER40-567", "BARGAIN50-890",
+      "SHOP75-123", "COUPON40-456", "SALE60-789", "REDEEM70-012", "GIFT80-345",
+      "PROMO90-678", "DEAL95-901", "VOUCHER10-234", "OFFER15-567", "BARGAIN20-890",
+      "SAVE125-123", "COUPON50-456", "DISCOUNT65-789", "REDEEM80-012", "GIFT95-345",
+      "PROMO100-678", "DEAL105-901", "VOUCHER20-234", "OFFER25-567", "BARGAIN30-890",
+      "SHOP100-123", "COUPON60-456", "SALE70-789", "REDEEM90-012", "GIFT105-345",
+      "PROMO110-678", "DEAL115-901", "VOUCHER30-234", "OFFER35-567", "BARGAIN40-890",
+      "SAVE150-123", "COUPON70-456", "DISCOUNT80-789", "REDEEM100-012", "GIFT115-345",
+      "PROMO120-678", "DEAL125-901", "VOUCHER40-234", "OFFER45-567", "BARGAIN50-890",
+      "SHOP125-123", "COUPON80-456", "SALE90-789", "REDEEM110-012", "GIFT125-345",
+      "PROMO130-678", "DEAL135-901", "VOUCHER50-234", "OFFER55-567", "BARGAIN60-890",
+      "SAVE175-123", "COUPON90-456", "DISCOUNT100-789", "REDEEM120-012", "GIFT135-345",
+      "PROMO140-678", "DEAL145-901", "VOUCHER60-234", "OFFER65-567", "BARGAIN70-890",
+      "SHOP150-123", "COUPON100-456", "SALE110-789", "REDEEM130-012", "GIFT145-345",
+      "PROMO150-678", "DEAL155-901", "VOUCHER70-234", "OFFER75-567", "BARGAIN80-890",
+      "SAVE200-123", "COUPON110-456", "DISCOUNT120-789", "REDEEM140-012", "GIFT155-345",
+      "PROMO160-678", "DEAL165-901", "VOUCHER80-234", "OFFER85-567", "BARGAIN90-890",
+      "SHOP175-123", "COUPON120-456", "SALE130-789", "REDEEM150-012", "GIFT165-345",
+      "PROMO170-678", "DEAL175-901", "VOUCHER90-234", "OFFER95-567", "BARGAIN100-890",
+      "SAVE225-123", "COUPON130-456", "DISCOUNT140-789", "REDEEM160-012", "GIFT175-345",
+      "PROMO180-678", "DEAL185-901", "VOUCHER100-234", "OFFER105-567", "BARGAIN110-890",
+      "SHOP200-123", "COUPON140-456", "SALE150-789", "REDEEM170-012", "GIFT185-345",
+      "PROMO190-678", "DEAL195-901", "VOUCHER110-234", "OFFER115-567", "BARGAIN120-890",
+      "SAVE250-123", "COUPON150-456", "DISCOUNT160-789", "REDEEM180-012", "GIFT195-345",
+      "PROMO200-678", "DEAL205-901", "VOUCHER120-234", "OFFER125-567", "BARGAIN130-890",
+      "SHOP225-123", "COUPON160-456", "SALE170-789", "REDEEM190-012", "GIFT205-345",
+      "PROMO210-678", "DEAL215-901", "VOUCHER130-234", "OFFER135-567", "BARGAIN140-890",
+      "SAVE275-123", "COUPON170-456", "DISCOUNT180-789", "REDEEM200-012", "GIFT215-345",
+      "PROMO220-678", "DEAL225-901", "VOUCHER140-234", "OFFER145-567", "BARGAIN150-890",
+      "SHOP250-123", "COUPON180-456", "SALE190-789", "REDEEM210-012", "GIFT225-345",
+      "PROMO230-678", "DEAL235-901", "VOUCHER150-234", "OFFER155-567", "BARGAIN160-890",
+      "SAVE300-123", "COUPON190-456", "DISCOUNT200-789", "REDEEM220-012", "GIFT235-345",
+      "PROMO240-678", "DEAL245-901", "VOUCHER160-234", "OFFER165-567", "BARGAIN170-890",
+      "SHOP275-123", "COUPON200-456", "SALE210-789", "REDEEM230-012", "GIFT245-345",
+      "PROMO250-678", "DEAL255-901", "VOUCHER170-234", "OFFER175-567", "BARGAIN180-890",
+      "SAVE325-123", "COUPON210-456", "DISCOUNT220-789", "REDEEM240-012", "GIFT255-345",
+      "PROMO260-678", "DEAL265-901", "VOUCHER180-234", "OFFER185-567", "BARGAIN190-890",
+      "SHOP300-123", "COUPON220-456", "SALE230-789", "REDEEM250-012", "GIFT265-345",
+      "PROMO270-678", "DEAL275-901", "VOUCHER190-234", "OFFER195-567", "BARGAIN200-890",
+      "SAVE350-123", "COUPON230-456", "DISCOUNT240-789", "REDEEM260-012", "GIFT275-345",
+      "PROMO280-678", "DEAL285-901", "VOUCHER200-234", "OFFER205-567", "BARGAIN210-890",
+      "SHOP325-123", "COUPON240-456", "SALE250-789", "REDEEM270-012", "GIFT285-345",
+      "PROMO290-678", "DEAL295-901", "VOUCHER210-234", "OFFER215-567", "BARGAIN220-890",
+      "SAVE375-123", "COUPON250-456", "DISCOUNT260-789", "REDEEM280-012", "GIFT295-345",
+      "PROMO300-678", "DEAL305-901", "VOUCHER220-234", "OFFER225-567", "BARGAIN230-890",
+      "SHOP350-123", "COUPON260-456", "SALE270-789", "REDEEM290-012", "GIFT305-345",
+      "PROMO310-678", "DEAL315-901", "VOUCHER230-234", "OFFER235-567", "BARGAIN240-890"
+    ];
+
+    const loginForm = document.getElementById("login-form");
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const couponCode = document.getElementById("coupon-code").value;
+
+      if (!users[username]) {
+        // Create new user
+        if (couponCodes.includes(couponCode)) {
+          // Remove used coupon code
+          couponCodes.splice(couponCodes.indexOf(couponCode), 1);
+          localStorage.setItem("couponCodes", JSON.stringify(couponCodes));
+
+          users[username] = couponCode;
+          localStorage.setItem("users", JSON.stringify(users));
+          alert("User created successfully!");
+          window.location.href = `/dist/home.html?username=${username}`;
+        } else {
+          alert("Coupon code already used or invalid");
+        }
+      } else {
+        // Existing user
+        if (users[username] === couponCode) {
+          alert("Login successful!");
+          window.location.href = `/dist/home.html?username=${username}`;
+        } else {
+          alert("Invalid username or coupon code");
+        }
+      }
+    });
+
+    document.getElementById("login-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const couponCode = document.getElementById("coupon-code").value;
+
+      // Store username in local storage
+      localStorage.setItem("username", username);
+    });
+  </script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/dist/assets/js/off-canvas.js"></script>
+  <script src="/dist/assets/js/misc.js"></script>
+  <script src="/dist/assets/js/settings.js"></script>
+  <script src="/dist/assets/js/todolist.js"></script>
+  <!-- endinject -->
+</body>
+
+</html>
