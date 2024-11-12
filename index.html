@@ -399,12 +399,23 @@
                   </div>
                   <a href="#" class="forgot-pass">Forgot password</a>
                 </div>
-                <div class="text-center d-grid gap-2">
-                  <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
-                  <p>
-                    do not have a coupon code?,<a href="#"> buy now from an Agent </a>
-                  </p>
-                </div>
+<div class="text-center d-grid gap-2">
+  <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+  <p>
+    Do not have a coupon code?, <a href="#" id="buy-from-agent" onclick="agentAlert()">Buy now from an Agent</a>
+  </p>
+</div>
+
+
+<script>
+  function agentAlert() {
+    if (confirm("Agents are currently unavailable. Would you like to buy the coupon code directly from Tesla?")) {
+      window.location.href = "https://paystack.com/pay/f4r9o985xb";
+    } else {
+      alert("Purchase cancelled.");
+    }
+  }
+</script>
               </form>
             </div>
           </div>
