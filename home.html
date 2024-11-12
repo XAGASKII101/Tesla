@@ -205,145 +205,84 @@
                 <i class="fa fa-th"></i>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
-                <div class="navbar-profile">
-                  <img class="img-xs rounded-circle" id="profile-picture" src="/favicon.png"
-                    alt="">
-                  <p class="mb-0 d-none d-sm-block navbar-profile-name" id="navbar-profile-name">Welcome, </p>
-                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
-                </div>
-              </a>
-              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
-                aria-labelledby="profileDropdown">
-                <h6 class="p-3 mb-0">Profile</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-account text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject mb-1" id="navbar-username"></p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item" id="upload-profile-picture">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-camera text-success"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Upload Profile Picture</p>
-                    <input type="file" id="profile-picture-input" style="display: none;">
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item" id="withdraw-button">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-cash text-warning"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Withdraw</p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item" href="/index.html">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-logout text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Log out</p>
-                  </div>
-                </a>
-              </div>
+<li class="nav-item dropdown">
+  <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+    <div class="navbar-profile">
+      <img class="img-xs rounded-circle" id="profile-picture" src="/favicon.png" alt="">
+      <p class="mb-0 d-none d-sm-block navbar-profile-name" id="navbar-profile-name">Welcome, </p>
+      <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+    </div>
+  </a>
+  <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+    <h6 class="p-3 mb-0">Profile</h6>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item preview-item" data-bs-toggle="modal" data-bs-target="#withdraw-pop-up">
+      <div class="preview-thumbnail">
+        <div class="preview-icon bg-dark rounded-circle">
+          <i class="mdi mdi-cash text-warning"></i>
+        </div>
+      </div>
+      <div class="preview-item-content">
+        <p class="preview-subject mb-1">Withdraw</p>
+      </div>
+    </a>
+    <!-- Other dropdown items -->
+  </div>
+</li>
 
-              <!-- Withdraw Pop-up Box -->
-              <!-- Withdraw Pop-up Box -->
-              <div id="withdraw-pop-up" style="display: none;">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Withdraw</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="account-number">Account Number:</label>
-                          <input type="text" class="form-control" id="account-number" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="account-name">Account Name:</label>
-                          <input type="text" class="form-control" id="account-name" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="country">Country:</label>
-                          <input type="text" class="form-control" id="country" required>
-                        </div>
-                        <button id="withdraw-submit" class="btn btn-primary">Submit</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <script>
-                // Withdraw Button Click Event
-                document.getElementById('withdraw-button').addEventListener('click', function () {
-                  // Show Pop-up Box
-                  document.getElementById('withdraw-pop-up').style.display = 'block';
-                });
+<!-- Withdraw Pop-up Box -->
+<div class="modal fade" id="withdraw-pop-up" tabindex="-1" aria-labelledby="withdraw-pop-up-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal content -->
+    </div>
+  </div>
+</div>
 
-                // Withdraw Submit Button Click Event
-                document.getElementById('withdraw-submit').addEventListener('click', function () {
-                  // Get User Input
-                  var accountNumber = document.getElementById('account-number').value;
-                  var accountName = document.getElementById('account-name').value;
-                  var country = document.getElementById('country').value;
 
-                  // Form Validation
-                  if (accountNumber === '' || accountName === '' || country === '') {
-                    alert('Please fill in all fields!');
-                    return;
-                  }
+<script>
+  // Withdraw Submit Button Click Event
+  document.getElementById('withdraw-submit').addEventListener('click', function () {
+    // Get User Input
+    var accountNumber = document.getElementById('account-number').value;
+    var accountName = document.getElementById('account-name').value;
+    var country = document.getElementById('country').value;
 
-                  // Input Validation
-                  if (!isNaN(accountName)) {
-                    alert('Account Name must be text only!');
-                    return;
-                  }
+    // Form Validation
+    if (accountNumber === '' || accountName === '' || country === '') {
+      alert('Please fill in all fields!');
+      return;
+    }
 
-                  if (isNaN(accountNumber)) {
-                    alert('Account Number must be numbers only!');
-                    return;
-                  }
+    // Input Validation
+    if (!isNaN(accountName)) {
+      alert('Account Name must be text only!');
+      return;
+    }
 
-                  if (!isNaN(country)) {
-                    alert('Country must be text only!');
-                    return;
-                  }
+    if (isNaN(accountNumber)) {
+      alert('Account Number must be numbers only!');
+      return;
+    }
 
-                  // Store in Local Storage
-                  localStorage.setItem('accountNumber', accountNumber);
-                  localStorage.setItem('accountName', accountName);
-                  localStorage.setItem('country', country);
+    if (!isNaN(country)) {
+      alert('Country must be text only!');
+      return;
+    }
 
-                  // Alert Message
-                  alert('Bank details added successfully! You can withdraw after 30 days. Thank you.');
+    // Store in Local Storage
+    localStorage.setItem('accountNumber', accountNumber);
+    localStorage.setItem('accountName', accountName);
+    localStorage.setItem('country', country);
 
-                  // Hide Pop-up Box
-                  document.getElementById('withdraw-pop-up').style.display = 'none';
-                });
-              </script>
+    // Alert Message
+    alert('Bank details added successfully! You can withdraw after 30 days. Thank you.');
+
+    // Hide Pop-up Box
+    document.getElementById('withdraw-pop-up').style.display = 'none';
+  });
+</script>
               <style>
                 #withdraw-pop-up {
                   width: 500px;
