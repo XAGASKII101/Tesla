@@ -29,25 +29,27 @@
 </head>
 
 <body>
-<div class="container-scroller">
-  <div class="row p-0 m-0 proBanner" id="proBanner">
-    <div class="col-md-12 p-0 m-0">
-      <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
-        <div class="ps-lg-3">
-          <div class="d-flex align-items-center justify-content-between">
-            <p class="mb-0 font-weight-medium me-3 buy-now-text">Note That This Will Be Closing By 25th December</p>
-            <a href="#" target="_blank" class="btn me-2 buy-now-btn border-0">Explore More</a>
+  <div class="container-scroller">
+    <div class="row p-0 m-0 proBanner" id="proBanner">
+      <div class="col-md-12 p-0 m-0">
+        <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
+          <div class="ps-lg-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="mb-0 font-weight-medium me-3 buy-now-text">Note That This Will Be Closing By 25th December</p>
+              <a href="#" target="_blank" class="btn me-2 buy-now-btn border-0">Explore More</a>
+            </div>
           </div>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <a href="https://www.bootstrapdash.com/product/corona-admin-template/"><i class="fas fa-home me-3 text-white"></i></a>
-          <button id="bannerClose" class="btn border-0 p-0" onclick="document.getElementById('proBanner').style.display = 'none';">
-            <i class="fas fa-times text-white"></i>
-          </button>
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="#"><i
+                class="fas fa-home me-3 text-white"></i></a>
+            <button id="bannerClose" class="btn border-0 p-0"
+              onclick="document.getElementById('proBanner').style.display = 'none';">
+              <i class="fas fa-times text-white"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
@@ -59,7 +61,7 @@
           <p style="font-size: 14px; font-weight: bold; margin-bottom: 0;">TE</p>
         </a>
       </div>
-<ul class="nav">
+      <ul class="nav">
         <li class="nav-item profile">
           <div class="profile-desc">
             <div class="profile-pic">
@@ -158,7 +160,7 @@
               </form>
             </li>
           </ul>
-  <ul class="navbar-nav navbar-nav-right">
+          <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown d-none d-lg-block">
               <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
                 aria-labelledby="createbuttonDropdown">
@@ -205,163 +207,162 @@
                 <i class="fa fa-th"></i>
               </a>
             </li>
-<li class="nav-item dropdown">
-<a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
-<div class="navbar-profile">
-<img class="img-xs rounded-circle" id="profile-picture" src="/favicon.png"
-alt="">
-<p class="mb-0 d-none d-sm-block navbar-profile-name" id="navbar-profile-name">Welcome, </p>
-<i class="mdi mdi-menu-down d-none d-sm-block"></i>
-</div>
-</a>
-<div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
-aria-labelledby="profileDropdown">
-<h6 class="p-3 mb-0">Profile</h6>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item">
-<div class="preview-thumbnail">
-<div class="preview-icon bg-dark rounded-circle">
-<i class="mdi mdi-account text-primary"></i>
-</div>
-</div>
-<div class="preview-item-content">
-<p class="preview-subject mb-1" id="navbar-username"></p>
-</div>
-</a>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" id="upload-profile-picture">
-<div class="preview-thumbnail">
-<div class="preview-icon bg-dark rounded-circle">
-<i class="mdi mdi-camera text-success"></i>
-</div>
-</div>
-<div class="preview-item-content">
-<p class="preview-subject mb-1">Upload Profile Picture</p>
-<input type="file" id="profile-picture-input" style="display: none;">
-</div>
-</a>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" id="withdraw-button">
-<div class="preview-thumbnail">
-<div class="preview-icon bg-dark rounded-circle">
-<i class="mdi mdi-cash text-warning"></i>
-</div>
-</div>
-<div class="preview-item-content">
-<p class="preview-subject mb-1">Withdraw</p>
-</div>
-</a>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" href="/index.html">
-<div class="preview-thumbnail">
-<div class="preview-icon bg-dark rounded-circle">
-<i class="mdi mdi-logout text-danger"></i>
-</div>
-</div>
-<div class="preview-item-content">
-<p class="preview-subject mb-1">Log out</p>
-</div>
-</a>
-</div>
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" id="profile-picture" src="/favicon.png" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name" id="navbar-profile-name">Welcome, </p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list"
+                aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-account text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1" id="navbar-username"></p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" id="upload-profile-picture">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-camera text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Upload Profile Picture</p>
+                    <input type="file" id="profile-picture-input" style="display: none;">
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" id="withdraw-button">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-cash text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Withdraw</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="/index.html">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Log out</p>
+                  </div>
+                </a>
+              </div>
 
-<!-- Withdraw Pop-up Box -->
-<!-- Withdraw Pop-up Box -->
-<div id="withdraw-pop-up" style="display: none;">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Withdraw</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form>
-<div class="form-group">
-<label for="account-number">Account Number:</label>
-<input type="text" class="form-control" id="account-number" required>
-</div>
-<div class="form-group">
-<label for="account-name">Account Name:</label>
-<input type="text" class="form-control" id="account-name" required>
-</div>
-<div class="form-group">
-<label for="country">Country:</label>
-<input type="text" class="form-control" id="country" required>
-</div>
-<button id="withdraw-submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
-</div>
-</div>
-</div>
+              <!-- Withdraw Pop-up Box -->
+              <!-- Withdraw Pop-up Box -->
+              <div id="withdraw-pop-up" style="display: none;">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Withdraw</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="account-number">Account Number:</label>
+                          <input type="text" class="form-control" id="account-number" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="account-name">Account Name:</label>
+                          <input type="text" class="form-control" id="account-name" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="country">Country:</label>
+                          <input type="text" class="form-control" id="country" required>
+                        </div>
+                        <button id="withdraw-submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-<script>
-// Withdraw Button Click Event
-document.getElementById('withdraw-button').addEventListener('click', function () {
-// Show Pop-up Box
-document.getElementById('withdraw-pop-up').style.display = 'block';
-});
+              <script>
+                // Withdraw Button Click Event
+                document.getElementById('withdraw-button').addEventListener('click', function () {
+                  // Show Pop-up Box
+                  document.getElementById('withdraw-pop-up').style.display = 'block';
+                });
 
-// Withdraw Submit Button Click Event
-document.getElementById('withdraw-submit').addEventListener('click', function () {
-// Get User Input
-var accountNumber = document.getElementById('account-number').value;
-var accountName = document.getElementById('account-name').value;
-var country = document.getElementById('country').value;
+                // Withdraw Submit Button Click Event
+                document.getElementById('withdraw-submit').addEventListener('click', function () {
+                  // Get User Input
+                  var accountNumber = document.getElementById('account-number').value;
+                  var accountName = document.getElementById('account-name').value;
+                  var country = document.getElementById('country').value;
 
-// Form Validation
-if (accountNumber === '' || accountName === '' || country === '') {
-alert('Please fill in all fields!');
-return;
-}
+                  // Form Validation
+                  if (accountNumber === '' || accountName === '' || country === '') {
+                    alert('Please fill in all fields!');
+                    return;
+                  }
 
-// Input Validation
-if (!isNaN(accountName)) {
-alert('Account Name must be text only!');
-return;
-}
+                  // Input Validation
+                  if (!isNaN(accountName)) {
+                    alert('Account Name must be text only!');
+                    return;
+                  }
 
-if (isNaN(accountNumber)) {
-alert('Account Number must be numbers only!');
-return;
-}
+                  if (isNaN(accountNumber)) {
+                    alert('Account Number must be numbers only!');
+                    return;
+                  }
 
-if (!isNaN(country)) {
-alert('Country must be text only!');
-return;
-}
+                  if (!isNaN(country)) {
+                    alert('Country must be text only!');
+                    return;
+                  }
 
-// Store in Local Storage
-localStorage.setItem('accountNumber', accountNumber);
-localStorage.setItem('accountName', accountName);
-localStorage.setItem('country', country);
+                  // Store in Local Storage
+                  localStorage.setItem('accountNumber', accountNumber);
+                  localStorage.setItem('accountName', accountName);
+                  localStorage.setItem('country', country);
 
-// Alert Message
-alert('Bank details added successfully! You can withdraw after 30 days. Thank you.');
+                  // Alert Message
+                  alert('Bank details added successfully! You can withdraw after 30 days. Thank you.');
 
-// Hide Pop-up Box
-document.getElementById('withdraw-pop-up').style.display = 'none';
-});
-</script>
-<style>
-#withdraw-pop-up {
-width: 500px;
-padding: 20px;
-}
+                  // Hide Pop-up Box
+                  document.getElementById('withdraw-pop-up').style.display = 'none';
+                });
+              </script>
+              <style>
+                #withdraw-pop-up {
+                  width: 500px;
+                  padding: 20px;
+                }
 
-#withdraw-pop-up input[type="text"] {
-width: 100%;
-height: 20px;
-font-size: 18px;
-padding: 10px;
-}
+                #withdraw-pop-up input[type="text"] {
+                  width: 100%;
+                  height: 20px;
+                  font-size: 18px;
+                  padding: 10px;
+                }
 
-#withdraw-pop-up label {
-font-size: 10px;
-font-weight: bold;
-}
-</style>
+                #withdraw-pop-up label {
+                  font-size: 10px;
+                  font-weight: bold;
+                }
+              </style>
               <style>
                 #withdraw-pop-up {
                   width: 500px;
@@ -1547,10 +1548,11 @@ font-weight: bold;
             <!-- partial:partials/_footer.html -->
             <footer class="footer">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a href="https://neuralink.com/"
-                    target="_blank">Tesla-Elon Musk</a>. All rights reserved.</span>
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
+                    href="https://neuralink.com/" target="_blank">Tesla-Elon Musk</a>. All rights reserved.</span>
                 <span class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center"> <span
-                    class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with Elon Musk
+                    class="text-muted float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+                    Elon Musk
                     <i class="mdi mdi-heart text-danger"></i></span> <i class="mdi mdi-heart text-danger"></i></span>
               </div>
             </footer>
